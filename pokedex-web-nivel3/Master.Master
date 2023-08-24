@@ -52,14 +52,14 @@
                             </div>                        
                         </div>
                     <%}%>
-                    <%else
+                   <%-- <%else
                       {%>
                         <div class="nav navbar-nav">
                             <div class="nav-item">
                                 <asp:Button Text="Cerrar Sesión" CssClass="btn btn-secondary pe-2" ID="btnCerrarSesion" OnClick="btnCerrarSesion_Click" runat="server" />
                             </div>                        
                         </div>
-                    <%}%>
+                    <%}%>--%>
                 </div>
             </div>
         </nav>
