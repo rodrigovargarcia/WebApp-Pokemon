@@ -110,6 +110,49 @@ namespace negocio
                 }
             }
         }
+        public List<Pokemon> listarConSPDefault()
+        {
+            {
+                List<Pokemon> lista = new List<Pokemon>();
+                AccesoDatos datos = new AccesoDatos();
+                try
+                {
+                    //string consulta = ("select Numero, Nombre, P.Descripcion, UrlImagen, E.Descripcion Tipo, D.Descripcion Debilidad, P.IdTipo, P.IdDebilidad, P.Id, P.Activo from POKEMONS P, ELEMENTOS E, ELEMENTOS D where E.id = P.IdTipo and D.id = P.IdDebilidad and p.Activo = 1");                    
+                    //datos.SetearConsulta(consulta);
+                    datos.SetearProcedimiento("storedListarDefault");
+                    datos.EjecutarLectura();
+
+                    while (datos.Lector.Read())
+                    {
+                        Pokemon aux = new Pokemon();
+                        aux.Id = (int)datos.Lector["Id"];
+                        aux.Numero = datos.Lector.GetInt32(0); // una forma
+                        aux.Nombre = (string)datos.Lector["Nombre"]; // otra forma, mejor porque no hace falta especificar el indice 
+                        aux.Descripcion = (string)datos.Lector["Descripcion"];
+                        //aux.Activo = bool.Parse(datos.Lector["Activo"].ToString());
+
+                        if (!(datos.Lector["UrlImagen"] is DBNull))
+                            aux.UrlImagen = (string)datos.Lector["UrlImagen"];
+
+
+                        aux.Tipo = new Elemento();
+                        aux.Tipo.id = (int)datos.Lector["IdTipo"];
+                        aux.Tipo.Descripcion = (string)datos.Lector["Tipo"];
+                        aux.Debilidad = new Elemento();
+                        aux.Debilidad.id = (int)datos.Lector["IdDebilidad"];
+                        aux.Debilidad.Descripcion = (string)datos.Lector["Debilidad"];
+
+                        lista.Add(aux);
+                    }
+                    return lista;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+
+        }
 
         public void agregar(Pokemon nuevo)
         {

@@ -12,14 +12,16 @@ namespace pokedex_web_nivel3
     public partial class Default : System.Web.UI.Page
     {
         public List<Pokemon> ListaPokemon { get; set; }
+
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            PokemonNegocio negocio = new PokemonNegocio();
-            ListaPokemon = negocio.listarConSP();
-            if (!IsPostBack)
+            PokemonNegocio negocio = new PokemonNegocio();                        
+            ListaPokemon = negocio.listarConSPDefault();
+            if (!IsPostBack)            
             {
                 repRepetidor.DataSource = ListaPokemon;
-                repRepetidor.DataBind();
+                repRepetidor.DataBind();                
             }
         }
 

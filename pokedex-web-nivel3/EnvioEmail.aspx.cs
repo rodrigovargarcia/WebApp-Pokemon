@@ -25,7 +25,8 @@ namespace pokedex_web_nivel3
             }
             catch (Exception ex)
             {
-                throw;
+                Session.Add("error", ex.ToString());
+                Response.Redirect("/Error.aspx");
             }
         }
     }

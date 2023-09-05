@@ -39,12 +39,13 @@ namespace pokedex_web_nivel3
             catch (Exception ex)
             {
                 Session.Add("error", ex.ToString());
+                Response.Redirect("/Error.aspx");
             }
         }
 
         protected void btnCancelarRegistro_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Default.aspx");
+            Response.Redirect("/Default.aspx",false);
         }
     }
 }

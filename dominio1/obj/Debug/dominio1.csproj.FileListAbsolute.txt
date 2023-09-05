@@ -10,3 +10,9 @@ C:\Users\rodri\OneDrive\Escritorio\maxiprograma\C# nivel 3\pokedex-web\dominio1\
 C:\Users\rodri\OneDrive\Escritorio\maxiprograma\C# nivel 3\pokedex-web\dominio1\obj\Debug\dominio1.csproj.CoreCompileInputs.cache
 C:\Users\rodri\OneDrive\Escritorio\maxiprograma\C# nivel 3\pokedex-web\dominio1\obj\Debug\dominio1.dll
 C:\Users\rodri\OneDrive\Escritorio\maxiprograma\C# nivel 3\pokedex-web\dominio1\obj\Debug\dominio1.pdb
+C:\Users\PC\Desktop\Repo Git\WebApp-Pokemon\dominio1\bin\Debug\dominio1.dll
+C:\Users\PC\Desktop\Repo Git\WebApp-Pokemon\dominio1\bin\Debug\dominio1.pdb
+C:\Users\PC\Desktop\Repo Git\WebApp-Pokemon\dominio1\obj\Debug\dominio1.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Repo Git\WebApp-Pokemon\dominio1\obj\Debug\dominio1.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Repo Git\WebApp-Pokemon\dominio1\obj\Debug\dominio1.dll
+C:\Users\PC\Desktop\Repo Git\WebApp-Pokemon\dominio1\obj\Debug\dominio1.pdb

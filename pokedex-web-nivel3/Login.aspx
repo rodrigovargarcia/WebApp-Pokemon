@@ -10,7 +10,7 @@
         <div class="col-4">
             <div class="mb-3">
                 <label class="form-label">Email</label>
-                <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control" />
+                <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control" REQUIRED />
                 <label class="form-label">Contraseña</label>
                 <asp:TextBox runat="server" ID="txtPassword" CssClass="form-control" Type="password" />
             </div>

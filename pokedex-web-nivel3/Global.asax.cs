@@ -12,5 +12,14 @@ namespace pokedex_web_nivel3
         protected void Application_Start(object sender, EventArgs e)
         {
         }
+        void Application_Error(object sender, EventArgs e)
+        {
+            Exception exc = Server.GetLastError();
+
+            Session.Add("error", exc.ToString());
+            // Pass the error on to the error page.    ----> Handling Error, manejo de forma genérico.
+            Server.Transfer("Error.apx");
+            
+        }
     }
 }

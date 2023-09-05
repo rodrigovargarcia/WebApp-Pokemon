@@ -76,11 +76,11 @@ namespace pokedex_web_nivel3
             {
                 PokemonNegocio negocio = new PokemonNegocio();
                 dgvPokemons.DataSource = negocio.filtrar(ddlCampo.SelectedItem.ToString(), ddlCriterio.Text, txtFiltro.Text, ddlEstado.Text);
-
             }
             catch (Exception ex)
             {
-                Session.Add("Error", ex);
+                Session.Add("Error", ex.ToString());
+                Response.Redirect("/Error.aspx");
             }
         }
     }
